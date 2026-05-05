@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Entering Esan is a reflective educational project about Esan culture, designed for respectful learning."
+    />
+    <title>Entering Esan</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Site header: persistent navigation for all sections. -->
+    <header class="site-header" data-site-header>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Entering Esan home">
+          <span class="brand-mark" aria-hidden="true">Ee</span>
+          <span>Entering Esan</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+          data-nav-toggle
+        >
+          <span class="sr-only">Toggle menu</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <ul class="nav-links" id="primary-menu" data-nav-menu>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#map">Map</a></li>
+          <li><a href="#marriage">Marriage</a></li>
+          <li><a href="#language">Proverbs</a></li>
+          <li><a href="#masquerade">Masquerade</a></li>
+          <li><a href="#ethics">Ethics</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero: first encounter with the project and reflective threshold. -->
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">A digital humanities learning space</p>
+          <h1 id="hero-title">Entering Esan</h1>
+          <p class="hero-subtitle">
+            A respectful educational project about Esan culture, memory,
+            language, and everyday forms of knowledge.
+          </p>
+          <p class="hero-intro">
+            This site invites slow attention rather than quick extraction. It
+            introduces learning materials around place, greetings, marriage
+            traditions, language, cultural performance, and ethics while asking visitors to
+            pause before entering.
+          </p>
+          <button class="primary-button" type="button" data-open-entry>
+            Enter Respectfully
+          </button>
+        </div>
+      </section>
+
+      <!-- Entry status appears after the modal is completed. -->
+      <section class="entry-status" aria-live="polite" data-entry-status hidden>
+        <div class="section-inner compact">
+          <p>
+            Thank you for pausing. Your responses were not collected, saved, or
+            sent anywhere. You may now continue through the project materials.
+          </p>
+        </div>
+      </section>
+
+      <div id="main-content" data-gated-content hidden>
+        <section class="section intro-section" aria-labelledby="welcome-title">
+          <div class="section-inner">
+            <div class="two-column">
+              <div>
+                <p class="eyebrow">Orientation</p>
+                <h2 id="welcome-title">A Brief Introduction to Esan Culture</h2>
+              </div>
+              <div class="intro-copy">
+                <p>
+                  The word "Esan" means to jump or flee. Esan customs were
+                  passed along generations orally, though many are now being
+                  documented. The supplied project notes describe Esanland as a
+                  place inhabited by fleeing warriors and other individuals who
+                  settled there over time.
+                </p>
+                <p>
+                  Esanland is comprised of sixteen constituents, some of which
+                  were established by brothers. Three of these brothers were
+                  Irrua (Uruwa), Uromi (Uronmun), and Ekpoma (Ekunma). These
+                  constituents practiced similar customs with slight variations.
+                </p>
+                <p>
+                  Esan traditions cover areas such as marriage, social
+                  etiquette, markets and economics, religion, health, and
+                  justice.
+                </p>
+              </div>
+            </div>
+
+            <div class="greeting-row" aria-label="Esan greeting examples">
+              <article class="greeting-card">
+                <p class="eyebrow">Greeting</p>
+                <h3>Ibhokhamalaen bha bo shan</h3>
+                <p>My people, you are welcome.</p>
+              </article>
+              <article class="greeting-card">
+                <p class="eyebrow">Call and Response</p>
+                <h3>Khara</h3>
+                <p>Pronounced "arra"; the response is <strong>Obokhian</strong>.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section video-section" aria-labelledby="video-title">
+          <div class="section-inner video-layout">
+            <div>
+              <p class="eyebrow">Orientation</p>
+              <h2 id="video-title">Video Resource</h2>
+              <p>
+                This project includes an external video resource for visitors
+                who want to continue learning through audiovisual material.
+              </p>
+            </div>
+            <!-- Video is loaded only after a visitor chooses to contact YouTube. -->
+            <div class="video-consent" data-video-panel>
+              <p>
+                To protect the site's quiet privacy posture, the YouTube video
+                is not loaded automatically. Selecting the button will contact
+                YouTube in a new embedded frame.
+              </p>
+              <button
+                class="secondary-button"
+                type="button"
+                data-load-video
+                data-video-src="https://www.youtube-nocookie.com/embed/kmWCNdCigJg"
+              >
+                Load Video
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="map" aria-labelledby="map-title">
+          <div class="section-inner">
+            <div class="section-heading">
+              <p class="eyebrow">Place</p>
+              <h2 id="map-title">Map of Esan in Edo State</h2>
+              <p>
+                Esanland, located in Edo State, Nigeria, is made up of five
+                Local Government Areas: Esan North-East, Esan Central, Esan
+                West, Esan South-East, and Igueben. Together, these
+                administrative regions form the cultural and geographic heart
+                of the Esan people.
+              </p>
+            </div>
+
+            <div class="map-layout">
+              <!-- Map image supplied for the project and kept local for GitHub Pages. -->
+              <figure class="map-image-card">
+                <img
+                  src="assets/culture/esan-map.png"
+                  alt="Map of the Ishan or Esan area showing towns and neighboring regions"
+                />
+                <figcaption>Map of the Ishan Area</figcaption>
+              </figure>
+              <article class="content-card">
+                <h3>Unity and Local Difference</h3>
+                <p>
+                  Within each Local Government Area are numerous towns and
+                  villages, many of which hold deep historical and cultural
+                  significance. These communities are custodians of Esan
+                  heritage and living centers where traditions, values, and
+                  collective memory continue to thrive.
+                </p>
+                <p>
+                  While Esan people share a common cultural framework expressed
+                  through similar customs, beliefs, and social practices, each
+                  locality has its own distinct history and identity. These
+                  differences are reflected in variations in linguistic
+                  phonology, where dialects subtly differ in tone,
+                  pronunciation, and expression.
+                </p>
+                <p>
+                  This blend of unity and diversity gives Esanland its unique
+                  character: a culturally cohesive region enriched by the
+                  distinct voices and histories of its many communities.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="marriage" aria-labelledby="marriage-title">
+          <div class="section-inner">
+            <div class="section-heading">
+              <p class="eyebrow">Kinship</p>
+              <h2 id="marriage-title">Marriage Traditions</h2>
+              <p>
+                Marriage is presented here through historical documentation and
+                current traditional practice. Some historical customs described
+                below involved coercion or unequal power; they are included for
+                study, not endorsement.
+              </p>
+            </div>
+
+            <figure class="photo-feature">
+              <img
+                src="assets/wedding/couple-family.jpg"
+                alt="Bride and groom in Esan traditional wedding attire with family members nearby"
+              />
+              <figcaption>
+                A contemporary Esan traditional wedding moment, showing red
+                attire, coral beads, and family presence.
+              </figcaption>
+            </figure>
+
+            <div class="marriage-overview">
+              <article class="content-card">
+                <h3>Marriage as Family Union</h3>
+                <p>
+                  In Esan land, marriage brings a man and a woman together and
+                  also joins two families. From the consummation of the
+                  marriage, the associated families are expected to support one
+                  another in difficult times and celebrate together during
+                  festivities.
+                </p>
+              </article>
+              <article class="content-card">
+                <h3>Traditional Marriage Today</h3>
+                <p>
+                  Church weddings and court registration are recognized, but
+                  traditional marriage remains central and usually comes before
+                  any other form of marriage.
+                </p>
+              </article>
+            </div>
+
+            <div class="subsection-heading">
+              <h3>Historical Marriage Customs</h3>
+              <p>
+                The following customs are summarized from the supplied notes as
+                historical practices. They should be read with attention to
+                context, change over time, and ethical concerns.
+              </p>
+            </div>
+
+            <div class="detail-grid">
+              <details class="content-card">
+                <summary>Marriage by Betrothal</summary>
+                <p>
+                  Betrothal could be arranged between two families before a
+                  child was born. Instead of a bride price, the family to whom
+                  the child was promised might perform tasks such as helping
+                  with farming over several years.
+                </p>
+              </details>
+              <details class="content-card">
+                <summary>The Dowry System</summary>
+                <p>
+                  The dowry system was more common among affluent families and
+                  could involve a high payment in cowries. The notes also record
+                  drawbacks, including cases where a bride resisted the match.
+                </p>
+              </details>
+              <details class="content-card">
+                <summary>Marriage by Inheritance</summary>
+                <p>
+                  After a husband's death, widows could be inherited by the
+                  deceased man's brothers after mourning periods. The notes say
+                  elders in some Esan constituents later discouraged the
+                  practice because of harmful family incentives.
+                </p>
+              </details>
+              <details class="content-card">
+                <summary>Marriage by Pledging</summary>
+                <p>
+                  A man could pledge a child, usually a daughter, as collateral
+                  for a loan or unpaid debt. If he could not repay, the child
+                  could be married to the creditor.
+                </p>
+              </details>
+              <details class="content-card">
+                <summary>Marriage by Pawning</summary>
+                <p>
+                  A young man who wanted to marry a particular girl might work
+                  for her family, often on farms, until the family was satisfied
+                  and the marriage could take place.
+                </p>
+              </details>
+              <details class="content-card">
+                <summary>Marriage after Divorce</summary>
+                <p>
+                  The notes describe strong social restrictions on remarriage
+                  after a woman left her husband. They also mention an 1882
+                  occurrence connected to conflict between villages.
+                </p>
+              </details>
+              <details class="content-card wide">
+                <summary>The Onojie's Marriage</summary>
+                <p>
+                  The Onojie, or king, could marry multiple women and held
+                  exceptional authority in marriage matters. The notes describe
+                  royal privilege, bead placement, and the social honor families
+                  might associate with a daughter being chosen by the king.
+                </p>
+              </details>
+            </div>
+
+            <div class="subsection-heading">
+              <h3>Current Esan Traditional Marriage Custom</h3>
+              <p>
+                The process below summarizes the current custom as described in
+                the supplied project material.
+              </p>
+            </div>
+
+            <div class="feature-list">
+              <article class="content-card horizontal">
+                <span class="card-number">01</span>
+                <div>
+                  <h3>Meeting and Family Enquiries</h3>
+                  <p>
+                    The prospective bride and groom may meet directly or be
+                    introduced by relatives or friends. If both are interested,
+                    they inform their parents, who quietly make enquiries about
+                    family background, character, health concerns, and possible
+                    kinship ties.
+                  </p>
+                </div>
+              </article>
+              <article class="content-card horizontal">
+                <span class="card-number">02</span>
+                <div>
+                  <h3>Formal Visit and Marriage List</h3>
+                  <p>
+                    If the enquiries are satisfactory, the boy's father or
+                    uncle visits the girl's family with a go-between, or
+                    Osuomhan. Token gifts may be presented, and the groom's
+                    family may receive a list of items for the traditional
+                    marriage ceremony.
+                  </p>
+                </div>
+              </article>
+              <article class="content-card horizontal">
+                <span class="card-number">03</span>
+                <div>
+                  <h3>Items and Bride Price</h3>
+                  <p>
+                    The list may include kolanuts, spirits, beer, soft drinks,
+                    yams, palm oil, salt, a contribution toward entertainment,
+                    and money. Bride price is negotiated symbolically; the
+                    bride's father takes a token amount and returns the rest to
+                    help care for the bride.
+                  </p>
+                </div>
+              </article>
+              <article class="content-card horizontal">
+                <span class="card-number">04</span>
+                <div>
+                  <h3>Ceremony, Dress, and Recognition</h3>
+                  <p>
+                    The ceremony is festive, with food, drinks, singing, and
+                    dancing. The bride may wear a red wrapper and coral beads,
+                    while the groom may wear the Esan hand-woven wrapper known
+                    as igbulu.
+                  </p>
+                </div>
+              </article>
+              <article class="content-card horizontal">
+                <span class="card-number">05</span>
+                <div>
+                  <h3>Presentation and Departure</h3>
+                  <p>
+                    Decoy brides may be presented before the bride is revealed.
+                    After ceremonial recognition, eating, drinking, and dancing
+                    follow. The bride is later delivered to the groom's family
+                    by her aunts and friends.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="photo-gallery" aria-label="Esan traditional marriage photo gallery">
+              <figure>
+                <img loading="lazy" src="assets/wedding/wedding-veil.jpg" alt="Ceremonial veiling moment during an Esan traditional wedding" />
+                <figcaption>Veiling moment</figcaption>
+              </figure>
+              <figure>
+                <img loading="lazy" src="assets/wedding/bride-presentation.jpg" alt="Bride in red Esan wedding attire before seated family members" />
+                <figcaption>Bride presentation</figcaption>
+              </figure>
+              <figure>
+                <img loading="lazy" src="assets/wedding/bride-price.jpg" alt="Money being placed in a bowl during a traditional wedding ceremony" />
+                <figcaption>Bride price ritual</figcaption>
+              </figure>
+              <figure>
+                <img loading="lazy" src="assets/wedding/family-greeting.jpg" alt="Groom bowing before elders during an Esan wedding ceremony" />
+                <figcaption>Greeting elders</figcaption>
+              </figure>
+              <figure>
+                <img loading="lazy" src="assets/wedding/ceremony-blessing.jpg" alt="Family member blessing a seated couple during a wedding ceremony" />
+                <figcaption>Ceremonial blessing</figcaption>
+              </figure>
+              <figure>
+                <img loading="lazy" src="assets/wedding/wedding-procession.jpg" alt="Wedding procession with bride and groom in Esan traditional dress" />
+                <figcaption>Procession</figcaption>
+              </figure>
+              <figure>
+                <img loading="lazy" src="assets/wedding/bride-portrait.jpg" alt="Bride wearing red attire and coral beads for an Esan traditional wedding" />
+                <figcaption>Bride's attire</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="section muted" id="language" aria-labelledby="language-title">
+          <div class="section-inner">
+            <div class="section-heading">
+              <p class="eyebrow">Speech</p>
+              <h2 id="language-title">Proverbs and Language</h2>
+              <p>
+                Esan tradition, like many indigenous cultures across Nigeria,
+                is deeply rooted in a rich heritage of proverbs, folktales, and
+                customs that are unique to its people.
+              </p>
+            </div>
+
+            <div class="proverb-intro">
+              <p>
+                These cultural expressions emerge from generations of oral
+                tradition, carefully preserved and transmitted by active
+                custodians of the culture within their communities.
+              </p>
+              <p>
+                Far more than simple storytelling, Esan proverbs and folklore
+                serve as repositories of ethnographic and anthropological
+                knowledge. They preserve historical memory, encode social
+                values, and communicate moral lessons that guide behavior and
+                community life.
+              </p>
+              <p>
+                These oral forms also function as an indigenous knowledge
+                system, or what might be described as traditional technology.
+                Embedded within folktales and proverbs are practical techniques
+                related to farming, survival, and everyday living. Below are
+                selected Esan proverbs curated from various sources.
+              </p>
+            </div>
+
+            <div class="proverb-grid">
+              <article class="proverb-card">
+                <p class="proverb-text">Ose ii gba ni usẹnbhokhan.</p>
+                <p class="proverb-note">A young man's beauty is never without defects.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Eji Aah nyẹlẹn ọhle Aah khọ.</p>
+                <p class="proverb-note">People resemble where they live.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Udo ni Aah daghe ọ' vade ii degbi ọrhia bhi ẹlo.</p>
+                <p class="proverb-note">A missile that one sees coming does not blind one.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Eji ọboh da gui otọ ọhle ọle da horiẹ.</p>
+                <p class="proverb-note">A native doctor disappears only where he is used to.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Aah ii ri ebi Aah nanọ bui awa re.</p>
+                <p class="proverb-note">You do not tempt a dog with something to lick, since a dog is an avid licker.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Aah gheghe yọ ni olimhin kha mhẹn bhi ẹlo, ọhle Aah da ri ukpọn bhọ.</p>
+                <p class="proverb-note">Clothing a corpse is simply to beautify it.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Aah ii fi ini bhi otọ kha khin oha-ọtan.</p>
+                <p class="proverb-note">Do not go hunting for squirrel while you have an elephant as a catch.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Aah ii di isira ọnọ khin eni khin ẹkpẹn.</p>
+                <p class="proverb-note">You do not change to a tiger in the presence of one who can change to an elephant.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Amẹn ni ọrhia la muọn ii gbera ọle a.</p>
+                <p class="proverb-note">The water one would drink can never flow past one.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Aah ii yi ọbhẹnbhẹn khui ọkhọh.</p>
+                <p class="proverb-note">Do not ask a mad man to chase fowls away, since he would do it madly.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Ene wwue bhi uwa kha yyọ ele mmin okpodu, ẹbi ene wwuẹ bhi ole ki da ta yẹ.</p>
+                <p class="proverb-note">What would they say who slept outside if those who slept inside complained of harassment?</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">U'u ii ji Aah gui na.</p>
+                <p class="proverb-note">Death is impervious to appeal.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Ẹwa'ẹn Aah rẹ gbi efẹn nọ ribhi ẹkẹ akhe.</p>
+                <p class="proverb-note">Killing a rat that is holed up inside an earthen pot requires wisdom.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Ufẹmhẹn si obhokhan kha na, Aah ki yọ owualẹn kkani ọhle ni ọle.</p>
+                <p class="proverb-note">When the arrow from a child's bow travels far, an adult is suspected to be responsible.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Ọnọ gbi ọnọdeọde ọhle ọnọdeọde viẹ bhi itolimhin.</p>
+                <p class="proverb-note">In a funeral each mourner mourns the fate that befalls him, not the deceased's.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Ọmọn nọ yyu ọle mhọn ose nẹ.</p>
+                <p class="proverb-note">It is the deceased child that is always the prettiest.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Ohu bha lẹn ebialẹn si ọhle.</p>
+                <p class="proverb-note">Fury does not know its owner's strength; otherwise a weakling's rage would be tempered with restraint.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Agbọn khi ese.</p>
+                <p class="proverb-note">It is human beings that do disguise as supernatural forces.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Ọnọ ii ribhi eni, ọle Aah ri enyan si ọle tọn bhi egbi era'ẹn.</p>
+                <p class="proverb-note">It is the absent one whose yam would always be kept beside the fire.</p>
+              </article>
+              <article class="proverb-card">
+                <p class="proverb-text">Eto kha rẹ re, Aah yẹ lẹn eji ukẹhae nae.</p>
+                <p class="proverb-note">No matter how hairy the head becomes, the forehead remains distinct.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="masquerade" aria-labelledby="masquerade-title">
+          <div class="section-inner">
+            <div class="section-heading">
+              <p class="eyebrow">Cultural Performance</p>
+              <h2 id="masquerade-title">Masquerade Traditions</h2>
+              <p>
+                Igbabonilimhin (Uromi dialect) or Ikhien Alimhin (Ubiaza dialect) is an Esan acrobatic dance with colorful costumes enacted by the Esan people in Nigeria. 
+                Historically, it was a ceremony that was enacted periodically in every village in Esan land once a month. 
+                It is also a staple in every major ceremony, like the New Yam festival.
+                The act is very sacred and secret, as the acrobats are not actually people but 'spirits' that emerge to enact the dance for the people. 
+                Historically, once the spirits were out, women were not allowed to come out during the day, as it was believed that they would go barren if they saw them. 
+                Now, the dance can be witnessed in various Esan towns during Christmas time. 
+                More information on the spirits, such as their appearance and recession, cannot be publicly known, because it is esoteric knowledge known to only elders and the initiates.
+              </p>
+            </div>
+
+            <div class="culture-gallery">
+              <figure>
+                <img
+                  loading="lazy"
+                  src="assets/culture/masquerade-leap.jpg"
+                  alt="Esan masquerade performer leaping during an outdoor cultural event"
+                />
+                <figcaption>Movement, costume, and public performance.</figcaption>
+              </figure>
+              <figure>
+                <img
+                  loading="lazy"
+                  src="assets/culture/masquerade-procession.jpg"
+                  alt="Two Esan masquerade figures walking with community members"
+                />
+                <figcaption>Masquerade figures moving through a community setting.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ethics-section" id="ethics" aria-labelledby="ethics-title">
+          <div class="section-inner">
+            <div class="section-heading">
+              <p class="eyebrow">About / Ethics / Governance</p>
+              <h2 id="ethics-title">A Careful Digital Threshold</h2>
+              <p>
+                This page explains the project values that shape the site.
+              </p>
+            </div>
+
+            <div class="ethics-grid">
+              <article class="content-card">
+                <h3>Why a Reflective Entry?</h3>
+                <p>
+                  The entry threshold asks visitors to pause before consuming
+                  cultural material. It frames learning as a relationship of
+                  attention, humility, and responsibility.
+                </p>
+              </article>
+              <article class="content-card">
+                <h3>Against Extractive Design</h3>
+                <p>
+                  The project resists digital habits that turn culture into
+                  content to be skimmed, copied, or taken out of context. Its
+                  slower structure encourages reflection before access.
+                </p>
+              </article>
+              <article class="content-card">
+                <h3>No Stored Responses</h3>
+                <p>
+                  Visitor responses in the entry modal are not collected,
+                  stored, transmitted, analyzed, or saved in the browser. They
+                  exist only on screen to encourage private reflection.
+                </p>
+              </article>
+              <article class="content-card">
+                <h3>Educational and Curated</h3>
+                <p>
+                  This is an educational course project. It uses curated course
+                  material and should be expanded only through careful review,
+                  attribution, and governance.
+                </p>
+              </article>
+              <article class="content-card wide">
+                <h3>Representation Requires Care</h3>
+                <p>
+                  Cultural representation should be approached with caution,
+                  respect, and accountability. Future versions should identify
+                  who has authority to review materials, what knowledge should
+                  remain private, and how corrections or concerns can be raised.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Entering Esan is an educational course project and not an official
+        cultural institution website.
+      </p>
+    </footer>
+
+    <!-- Modal: answers are used only to unlock the page during this session. -->
+    <div class="modal-backdrop" data-entry-modal hidden>
+      <section
+        class="entry-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="entry-title"
+        aria-describedby="entry-note"
+      >
+        <button class="modal-close" type="button" aria-label="Close entry form" data-close-entry>
+          &times;
+        </button>
+
+        <p class="eyebrow">Reflective Entry</p>
+        <h2 id="entry-title">Before You Continue</h2>
+        <p id="entry-note" class="privacy-note">
+          Your responses are not collected, stored, sent, or saved. They are
+          only here to encourage reflection before entering the site.
+        </p>
+
+        <form class="entry-form" data-entry-form>
+          <label for="visit-reason">
+            Why are you visiting this site today?
+            <textarea id="visit-reason" name="visitReason" rows="3" required></textarea>
+          </label>
+
+          <label for="respect-meaning">
+            What does respectful cultural learning mean to you?
+            <textarea id="respect-meaning" name="respectMeaning" rows="3" required></textarea>
+          </label>
+
+          <fieldset>
+            <legend>Choose one</legend>
+            <label class="radio-option">
+              <input type="radio" name="learningPosition" value="learn" required />
+              <span>I am here to learn</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="learningPosition" value="some-knowledge" />
+              <span>I already have some knowledge of Esan culture</span>
+            </label>
+          </fieldset>
+
+          <label for="esan-word">
+            Type any Esan word you know, or type "I am here to learn"
+            <input id="esan-word" name="esanWord" type="text" required />
+          </label>
+
+          <button class="primary-button full-width" type="submit">
+            Continue Into the Site
+          </button>
+        </form>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
