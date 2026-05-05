@@ -17,26 +17,6 @@ The entry prompts run only in the visitor's browser. The site has no backend, do
 
 The YouTube resource is not loaded automatically. Visitors must choose **Load Video** before the page creates the embedded YouTube frame.
 
-## Run Locally
-
-Open `index.html` in a browser. No build step, package manager, server, or database is required.
-
-## Deploy to GitHub Pages
-
-1. Create a new GitHub repository.
-2. Upload these files and folders to the repository root:
-   - `index.html`
-   - `styles.css`
-   - `script.js`
-   - `assets/`
-   - `README.md`
-3. Commit the files to the `main` branch.
-4. In GitHub, open the repository settings.
-5. Go to **Pages**.
-6. Under **Build and deployment**, choose **Deploy from a branch**.
-7. Select the `main` branch and the `/root` folder.
-8. Save. GitHub will publish the site and show the Pages URL after deployment completes.
-
 ## Editing Content
 
 The current cultural content includes supplied course notes and some areas marked for future expansion. Before using the site beyond a course prototype, review and expand the material with appropriate scholars, community contributors, and governance processes.
